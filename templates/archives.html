@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Archive - {{SITENAME}}{% endblock %}
+{% block content %}
+          <h2 class="post-header">Archive</h2>
+          <div class="post-content">
+{% for year, list in articles_page.object_list|groupby('date.year')|sort(reverse=True) %}
+			     <div class="archive-wrapper">
+            <h4 class="archive-header">{{year}}</h4>
+            {% for article in list %}
+            <div class="recent-post-header">
+              <h4><a class="header-link" href="{{ SITEURL }}/{{ article.url }}">{{article.title}}&nbsp;<span class="link">&raquo;</span></a></h4>            
+              <div class="tags">
+              {% for tag in article.tags %}
+                <a href="{{ SITEURL }}/{{ tag.url }}">#{{tag}}</a>
+              {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+           </div>
+{% endfor %}
+          </div> 
+{% endblock %}

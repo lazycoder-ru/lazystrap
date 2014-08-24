@@ -1,0 +1,309 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
+
+body, html {
+	background-color: #fffffc;   
+	font-size: 15px;
+	height: 100%;
+	color: #505050;
+}
+
+h2, h3, h4, h5 {
+	font-family: 'PT Serif', Georgia;
+	color: #3b3b3b;
+	background: url('../img/dotted-border.png') repeat-x scroll left bottom transparent;
+	padding-bottom: 6px;
+}
+
+h2, .h2 {
+	font-size: 24px;
+}
+
+h3, .h3 {
+	font-size: 22px;
+}
+
+blockquote {
+	color: #777;
+	font-size: 15px;
+}
+
+.link, a {
+	color: #dd6660;
+    outline: none;
+}
+
+a:visited, a:focus {
+	text-decoration: none;
+	outline: none;
+	color: #d44;
+}
+
+a:hover {
+	color: #d44; /* #e44 2a6496 */
+    outline: none;
+    text-decoration: underline;
+}
+
+pre {
+	font-family: 'Consolas','DejaVu Sans Mono','Bitstream Vera Sans Mono',monospace;
+	overflow: auto;
+	font-size: 14px;
+
+}
+
+.page {
+	min-height: 100%;
+	padding-bottom: 4em;
+}
+
+.brand {
+	background: url('../img/logo.png') no-repeat center center transparent;
+	text-align: center;
+	font-size: 36pt;
+	color: #f6f6eb;
+	font-weight: bold;
+	font-family: Helvetica;
+	float: none;
+}
+
+.header {
+	background-color: #281f1f;
+	/*231a1a*/
+	text-align: center;
+	box-shadow: gray 0px 0px 5px;
+	margin-bottom: 35px;
+	padding-top: 7px;
+	padding-bottom: 9px;
+}
+
+.navbar-desc {
+	font-family: Verdana, sans-serif;
+	margin-top: -6px;
+	letter-spacing: 1px;
+	font-size: 13px;
+	color: #f6f6eb;
+}
+
+.post-header {
+	margin: 0px 0px 0px;
+}
+
+.post-date {
+	font-family: "PT Serif", serif;
+	font-weight: bold;
+	color: #e0e0e0;
+	font-size: 20px;
+	margin-top: 3px;
+	margin-right: 3px;
+	letter-spacing: -2px;
+}
+
+.post-metadata {
+	clear: both;
+	font-size: 12px;
+	margin-top: 0px;
+	margin-left: 15px;
+}
+
+.post-metadata a {
+	text-transform: lowercase;
+}
+
+.post-metadata-bottom {
+	font-size: 13px;
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+
+.post-metadata-bottom a {
+	margin-left: 15px;
+}
+
+.post-comments {
+	clear: both;
+	margin-top: 25px;
+}
+
+.post-content {
+	clear: both;
+	padding-top: 15px;
+	font-size: 15px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.footer-wrapper {
+	position: relative;
+	clear: both;
+	height: 4em;
+	margin-top: -4em;
+	text-align: center;
+	border-top: 1px solid #CCC;
+	text-transform: uppercase;
+	background-color: #F0F0F0;
+	padding-top:9px;
+	font-size: 14px;
+}
+
+.footer {
+	padding: 0px;
+	margin-bottom: 2px;
+	display: block;
+	font-size: 12px;
+	color: gray;
+}
+
+
+.footer > a {
+	color: gray;
+	margin-right: 7px;
+}
+
+.search-box {
+	margin-top: 7%;
+	margin-bottom: 9%;
+	text-align: center;
+}
+
+.recent-post-header {
+	margin: 0px 20px 14px;
+	padding-bottom: 4px;
+	background: url('../img/dotted-border.png') repeat-x scroll left bottom transparent;
+	clear: both;
+}
+
+.recent-post-header h4 {
+	margin-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	background: none;
+	float: left;
+}
+
+.recent-post-header .tags {
+	padding-top: 2px;
+	font-size: 14px;
+	letter-spacing: -0.3px;
+	text-align: right;
+	text-transform: lowercase;
+}
+
+.archive-wrapper {
+	margin-bottom: 35px;
+}
+
+a.header-link {
+	font-family: 'PT Serif', Georgia;
+	color: #3d3d3d;
+}
+
+a.header-link:hover {
+	text-decoration: none;
+	color: #1d1d1d;
+}
+
+span.form-control-feedback {
+	color: #ccc;
+}
+
+.archive-header {
+	font-weight: bold;
+}
+
+.align-right {
+	float: right;
+	margin-left: 10px;
+}
+
+.align-left {
+	float: left;
+	margin-right: 10px;
+}
+
+.pagination-wrapper {
+	text-align: left;
+	margin: -25px 20px 3px;
+	font-size: 13px;
+}
+
+.pagination {
+	border-radius: 1px;
+	padding: 0;
+	margin: 0;
+	margin-top: 35px;
+ 	font: 12px/1 'Open Sans', sans-serif;
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+}   
+
+.pagination li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+	padding: 8px 15px 9px 15px;
+     background-color: #f1f1f1;
+     border: 1px solid #dcdcdc;
+     border-radius: 1px;
+	color: #333;
+	margin-right: 8px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+	border: 1px solid #ccc;
+	background-color: #f3f3f3;
+	color: inherit;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+	padding: 8px 15px 9px 15px;
+     background: #fffffc;
+     border: 1px solid #dcdcdc;
+     border-radius: 1px;
+	color: #333;
+	margin-right: 8px;
+	text-align: center;
+}   
+
+.linenos pre {
+	border-right: none;
+	background-color: transparent;
+	padding-right: 6px;
+	border-radius: 2px 0px 0px 2px;
+}
+
+.code pre {
+	padding-left: 6px;
+	border-left: none;
+	border-radius: 0px 2px 2px 0px;
+}
+
+/* WTF !?*/
+
+.docutils dd {
+	padding-left: 3em;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Tag: {{tag}} - {{SITENAME}}{% endblock %}
+{% block content %}
+          <h2 class="post-header">Post tagged by <i>{{tag}}</i></h2>
+          <div class="post-content">
+          {% for article in articles_page.object_list %}
+            <div class="recent-post-header">
+              <h4><a class="header-link" href="{{ SITEURL }}/{{ article.url }}">{{article.title}}&nbsp;<span class="link">&raquo;</span></a></h4>            
+              <div class="tags">
+              {% for tag in article.tags %}
+                <a href="{{ SITEURL }}/{{ tag.url }}">#{{tag}}</a>
+              {% endfor %}
+              </div>
+            </div>
+          {% endfor %}          
+          </div> 
+{% endblock %}

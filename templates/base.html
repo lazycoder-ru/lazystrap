@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/lazystrap.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="description" content="{{ SITESUBTITLE }}" />
+    <link rel="canonical" href="{{ SITEURL }}" />
+    {% if FEED_ALL_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+    {% endif %}
+    {% if FEED_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+    {% endblock head %}
+    <meta name="keywords" content="{% block keywords %}{{ SITEKEYWORDS }}{% endblock keywords %}" />
+</head>
+<body>
+{% include "github.html" %}
+    <div class="page">
+      <div class="header">
+        <a href="{{ SITEURL }}">
+          <div class="navbar-brand brand"></div>
+        </a>
+        <div class="navbar-desc">
+          {{ SITESUBTITLE }}
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-md-8 col-md-offset-2">
+      {% block content %}
+      {% endblock %}
+        </div>
+      </div>
+    </div>
+    <footer class="footer-wrapper">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="footer">
+        {% for p in PAGES %}
+        	<a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+        {% endfor %}
+          <a href="{{ SITEURL }}/archives">Archive</a>
+          <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}">RSS</a>
+        {% for row in SOCIAL %}  
+          <a href="{{ row[1] }}">{{ row[0] }}</a>
+        {% endfor %}
+        </div>
+        <div class="footer">
+          2014 &copy; {{ SITESUBTITLE }} | Powered by <a href="http://getpelican.com">Pelican</a>
+        </div>
+      </div>
+    </footer>
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>
+      function validateForm(query)
+        {
+          return (query.length > 2);
+        }
+    </script>
+    {% endblock %}
+</body>
+</html>

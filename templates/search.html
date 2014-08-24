@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="theme/tipuesearch/tipuesearch.css">
+{% endblock %}
+{% block content %}
+          <h2 class="post-header">Поиск</h2>
+          <div class="post-content">
+          	{% include "searchform.html" %}
+          <div id="tipue_search_content"></div>    
+          </div> 
+{% endblock content %}
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="theme/tipuesearch/tipuesearch_set.js"></script>
+<script type="text/javascript" src="theme/tipuesearch/tipuesearch.min.js"></script>
+<script>
+$(document).ready(function() {
+     $('#tipue_search_input').tipuesearch({
+          'show': 10,
+          'mode': 'json',
+          'contentLocation': 'tipuesearch_content.json'
+     });
+});
+</script>
+{% endblock %}

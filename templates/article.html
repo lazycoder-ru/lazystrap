@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{article.title}} - {{SITENAME}}{% endblock %}
+{% block keywords %}{{super()}}{{ "," }}{{ article.tags|join(',') }}{% endblock keywords %}
+{% block head %}
+  {{ super() }}
+  {% for description in article.description %}
+    <meta name="description" contents="{{description}}" />
+  {% endfor %}
+  {% endblock %}
+
+{% block content %}
+          <div class="post-date pull-right">{{ article.date|strftime('%d.%m.%Y') }}</div>
+          <h2 class="post-header">{{ article.title }}</h2>
+          <div class="post-metadata pull-right">
+          {% for tag in article.tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}"><b>#</b>{{ tag }}</a>
+          {% endfor %}
+          </div>
+          <div class="post-content">
+            {{ article.content }}
+          </div>
+          <div class="post-comments">
+            <h4>Comments</h4>
+            {% include "commentsystem.html" %}
+          </div>
+{% endblock %}
