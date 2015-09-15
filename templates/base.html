@@ -29,7 +29,7 @@
     {% endblock head %}
     <meta name="keywords" content="{% block keywords %}{{ SITEKEYWORDS }}{% endblock keywords %}" />
 </head>
-<body>
+<body onload="set_years({{ BLOG_START_YEAR }})">
 {% include "github.html" %}
     <div class="page">
       <div class="header">
@@ -58,23 +58,14 @@
         {% endfor %}
         </div>
         <div class="footer">
-          2008-2014 &copy; {{ SITESUBTITLE }} | Powered by <a href="http://getpelican.com">Pelican</a>| <a href="http://creativecommons.org/licenses/by/4.0/">CC BY</a>
+          <span id="years">2008-2014</span> &copy; {{ SITESUBTITLE }} | Powered by <a href="http://getpelican.com">Pelican</a>| <a href="http://creativecommons.org/licenses/by/4.0/">CC BY</a>
         </div>
       </div>
     </footer>
     {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
     <script src="{{ SITEURL }}/theme/js/lightbox-2.6.min.js"></script>
-    <script>
-      function validateForm(query)
-        {
-          return (query.length > 2);
-        }
-    </script>
-    <script type="text/javascript">
-    $(document.links).filter(function() {
-      return this.hostname != window.location.hostname;
-    }).attr('target', '_blank');</script>
+    <script src="{{ SITEURL }}/theme/js/lazystrap.js"></script>
     {% endblock %}
 </body>
 </html>
