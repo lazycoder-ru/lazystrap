@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
 {{ super() }}
-<link rel="stylesheet" type="text/css" href="theme/tipuesearch/tipuesearch.css">
+<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/tipuesearch.css">
 {% endblock %}
 {% block content %}
 {% block content_title %}
@@ -11,7 +11,7 @@
             {% include "searchform.html" %}
             {% for article in articles[:7] %}
             <div class="recent-post-header">
-              <h4><a class="header-link" href="{{ SITEURL }}/{{ article.url }}">{{article.title}}&nbsp;<span class="link">&raquo;</span></a></h4>            
+              <h4><a class="header-link" href="{{ SITEURL }}/{{ article.url }}">{{article.title}}<span class="link">&raquo;</span></a></h4>          
               <div class="tags">
               {% for tag in article.tags[:3] %}
                 <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>

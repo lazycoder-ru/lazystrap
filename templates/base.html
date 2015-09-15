@@ -8,6 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ SITEURL }}/theme/css/lazystrap.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/lightbox.css" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ SITEURL }}/theme/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="{{ SITEURL }}/theme/favicon.png" type="image/x-icon" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,44 +34,47 @@
     <div class="page">
       <div class="header">
         <a href="{{ SITEURL }}">
-          <div class="navbar-brand brand"></div>
+          <img src="{{ SITEURL }}/theme/img/logo.png" alt="lazycoder.ru" />
         </a>
         <div class="navbar-desc">
           {{ SITESUBTITLE }}
         </div>
       </div>
       <div class="container">
-        <div class="col-md-8 col-md-offset-2">
       {% block content %}
       {% endblock %}
-        </div>
       </div>
     </div>
     <footer class="footer-wrapper">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="container">
         <div class="footer">
         {% for p in PAGES %}
         	<a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
         {% endfor %}
-          <a href="{{ SITEURL }}/archives">Archive</a>
+          <a href="{{ SITEURL }}/archives">Archives</a>
           <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}">RSS</a>
         {% for row in SOCIAL %}  
           <a href="{{ row[1] }}">{{ row[0] }}</a>
         {% endfor %}
         </div>
         <div class="footer">
-          2014 &copy; {{ SITESUBTITLE }} | Powered by <a href="http://getpelican.com">Pelican</a>
+          2008-2014 &copy; {{ SITESUBTITLE }} | Powered by <a href="http://getpelican.com">Pelican</a>| <a href="http://creativecommons.org/licenses/by/4.0/">CC BY</a>
         </div>
       </div>
     </footer>
     {% block scripts %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
+    <script src="{{ SITEURL }}/theme/js/lightbox-2.6.min.js"></script>
     <script>
       function validateForm(query)
         {
           return (query.length > 2);
         }
     </script>
+    <script type="text/javascript">
+    $(document.links).filter(function() {
+      return this.hostname != window.location.hostname;
+    }).attr('target', '_blank');</script>
     {% endblock %}
 </body>
 </html>
