@@ -307,12 +307,12 @@ footer {
 
 a.header-link {
     font-family: 'PT Serif', Georgia;
-    color: #3d3d3d;
+    color: #4f4f4f;
 }
 
 a.header-link:hover {
     text-decoration: none;
-    color: #161616;
+    color: #000;
 }
 
 .align-right {
