@@ -1,9 +1,13 @@
 lazystrap
 =========
 
-Lazystrap is my very first Pelican theme. Theme based on Twitter Bootstrap. Theme are not using author(s) and category templates. Search based on ``tipuesearch`` plugin.
-Theme has additional css and js for plugins: lightbox, tipuesearch. I using lightbox plugin from directory: https://github.com/jprine/pelican-plugins
-Note, that for correct work, next variables must be set in ``pelicanconf.py`` exactly as in example:
+Lazystrap is my very first Pelican theme.
+Theme has additional and modified css and js for plugins: lightbox, tipuesearch.
+I'm using ``lightbox`` plugin from https://github.com/jprine/pelican-plugins and ``tipuesearch`` from standart pelican plugins directory.
+
+Note, theme hasn't author and category templates.
+
+Note, for correct work, next variables must be set in ``pelicanconf.py`` exactly as in example:
 - ``TAG_URL = 'tag/{slug}'``
 - ``TAG_SAVE_AS = 'tag/{slug}/index.html'``
 - ``ARTICLE_URL = 'blog/{slug}'``
