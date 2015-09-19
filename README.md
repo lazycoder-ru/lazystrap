@@ -16,6 +16,17 @@ Note, for correct work, next variables must be set in ``pelicanconf.py`` exactly
 - ``PAGINATED_DIRECT_TEMPLATES = ('archives',)``
 - ``PAGINATION_PATTERNS = ((1, '{base_name}/', '{base_name}/index.html'), (2, '{base_name}/page{number}/', '{base_name}/page{number}/index.html'))``
 
+All theme text was moved to template variables:
+- ``ARCHIVES_TITLE = "Archives"``
+- ``COMMENTS_TITLE = "Comments"``
+- ``FEED_TITLE = "RSS"``
+- ``RECENT_POSTS_TITLE = "Recent posts"``
+- ``SEARCH_TITLE = "Search"``
+- ``PREV_TITLE = "Prev"``
+- ``NEXT_TITLE = "Next"``
+- ``TAG_PAGE_TITLE = "Post tagged by"``
+
+
 Other theme variables:
 - ``SITENAME = ""``
 - ``SITESUBTITLE = ""``
