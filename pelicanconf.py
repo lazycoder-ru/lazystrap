@@ -2,15 +2,6 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'lazycoder'
-SITENAME = u'lazystrap'
-
-PATH = 'content'
-
-TIMEZONE = 'Europe/Moscow'
-
-THEME = "themes/lazystrap"
-
 TAG_URL = 'tag/{slug}'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
 
@@ -23,6 +14,8 @@ PAGINATED_DIRECT_TEMPLATES = ('archives',)
 PAGINATION_PATTERNS = ((1, '{base_name}/', '{base_name}/index.html'), (2, '{base_name}/page{number}/', '{base_name}/page{number}/index.html'))
 
 BLOG_START_YEAR = "2008"
+
+COMMENT_SYSTEM_ID = "20774"
 
 ARCHIVES_TITLE = "Archives"
 COMMENTS_TITLE = "Comments"

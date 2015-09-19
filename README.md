@@ -35,6 +35,7 @@ Other theme variables:
 - ``SOCIAL = (('twitter', 'http://twitter.com/yourusername'),)``
 - ``GITHUB_USERNAME = ""``
 - ``BLOG_START_YEAR = ""``
+- ``COMMENT_SYSTEM_ID = ""``
 
 Screenshot
 ----------
