@@ -49,10 +49,10 @@
       <div class="container">
         <div class="footer">
         {% for p in PAGES %}
-        	<a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+            <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
         {% endfor %}
-          <a href="{{ SITEURL }}/archives">Archives</a>
-          <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}">RSS</a>
+          <a href="{{ SITEURL }}/archives">{{ ARCHIVES_TITLE }}</a>
+          <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}">{{ FEED_TITLE }}</a>
         {% for row in SOCIAL %}  
           <a href="{{ row[1] }}">{{ row[0] }}</a>
         {% endfor %}

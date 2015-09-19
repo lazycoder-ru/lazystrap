@@ -4,9 +4,9 @@
 <link rel="stylesheet" type="text/css" href="theme/css/tipuesearch.css">
 {% endblock %}
 {% block content %}
-          <h2 class="post-header">Search</h2>
+          <h2 class="post-header">{{ SEARCH_TITLE }}</h2>
           <div class="post-content">
-          	{% include "searchform.html" %}
+            {% include "searchform.html" %}
           <div id="tipue_search_content"></div>    
           </div> 
 {% endblock content %}

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Tag: {{tag}} - {{SITENAME}}{% endblock %}
 {% block content %}
-          <h2 class="post-header">Post tagged by <i>{{tag}}</i></h2>
+          <h2 class="post-header">{{ TAG_PAGE_TITLE }} <i>{{tag}}</i></h2>
           <div class="post-content">
           {% for article in articles_page.object_list %}
             <div class="recent-post-header">
