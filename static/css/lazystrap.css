@@ -140,7 +140,7 @@ img {
 }
 
 .link, a {
-    color: #dd6660;
+    color: #d55; /*#dd6660*/
     outline: none;
     text-decoration: none;
 }
@@ -152,11 +152,11 @@ img {
 a:visited, a:focus {
     text-decoration: none;
     outline: none;
-    color: #d44;
+    color: #d55; /*#dd6660*/
 }
 
 a:hover {
-    color: #d44; /* #e44 2a6496 */
+    color: #c00; /* #e44 2a6496 */
     outline: none;
     text-decoration: underline;
 }
